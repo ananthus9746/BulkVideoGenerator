@@ -1,0 +1,35 @@
+,,,,,
+Question,Country #1,Country #2,Country #3,Country #4,Country #5
+Top 5 Largest Countries by Population,india,china,United States,Indonesia,Pakistan
+Top 5 Most Visited Countries,France,Spain,United States,China,Italy
+Top 5 Richest Countries,Luxembourg,Singapore,Qatar,Ireland,Switzerland
+Top 5 Happiest Countries,Finland,Denmark,Switzerland,Iceland,Netherlands
+Top 5 Most Populous Countries,China,India,United States,Indonesia,Pakistan
+Top 5 Safest Countries,Iceland,New Zealand,Denmark,Finland,Austria
+Top 5 Most Beautiful Countries,New Zealand,Greece,Italy,Scotland,Switzerland
+Top 5 Most Culturally Diverse Countries,India,Canada,Australia,United States,South Africa
+Top 5 Largest Economies,United States,China,Japan,Germany,United Kingdom
+ Top 5 Most Technologically Advanced Countries,United States,Japan,South Korea,Germany,Finland
+Top 5 Tallest Buildings,Burj Khalifa,Shanghai Tower,Abraj Al-Bait,Ping An,Lotte World
+Top 5 Most Famous Landmarks,Eiffel Tower,Great Wall,Taj Mahal,Statue of Liberty,Machu Picchu
+Top 5 Must-Try Cuisines,Italian,Mexican,Chinese,Indian,Japanese
+ Top 5 Most Spoken Languages,Mandarin,Spanish,English,Hindi,Arabic
+Top 5 Unique Traditions,Chinese New Year,Day of the Dead,Oktoberfest,Holi,Carnival
+Top 5 Natural Wonders,Grand Canyon,Great Barrier Reef,Victoria Falls,Aurora Borealis,Mount Everest
+Top 5Famous Festivals,Rio Carnival,Coachella,Oktoberfest,Diwali,Mardi Gras
+Top 5 Historical Events,World War II,French Revolution,American Revolution,Fall of the Berlin Wall,Moon Landing
+Top 5 Iconic Cars,Ford Mustang,Volkswagen Beetle,Ferrari 488,Lamborghini Aventador,Porsche 911
+Top 5 Sports in Each Country,Football (Soccer),Cricket,Baseball,Rugby,Basketball
+Top 5 Fashion Capitals,Paris,Milan,New York,London,Tokyo
+Top 5 Famous Artists and Their Masterpieces,Leonardo da Vinci,Vincent van Gogh,Pablo Picasso,Michelangelo,Frida Kahlo
+Top 5 Film Industries,Hollywood,Bollywood,Nollywood,South Korean,Japanese
+Top 5 Influential Leaders,Nelson Mandela,Mahatma Gandhi,Martin Luther King Jr.,Winston Churchill,Nelson Mandela
+ Top 5 Architectural Marvels,Taj Mahal,Sydney Opera House,Guggenheim Museum,Great Wall of China,Colosseum
+Top 5 Famous Writers and Their Books,William Shakespeare,Jane Austen,Mark Twain,J.K. Rowling,Gabriel Garcia Marquez
+Top 5 Adventure Destinations,Patagonia,Bora Bora,Serengeti National Park,Great Barrier Reef,Yosemite National Park
+Top 5 Tech Start-Up Hubs,Silicon Valley,Tel Aviv,London,Berlin,Bangalore
+Top 5 Influential Scientists,Albert Einstein,Isaac Newton,Marie Curie,Charles Darwin,Nikola Tesla
+Top 5 Famous YouTubers,PewDiePie,Dude Perfect,MrBeast,Jeffree Star,Ryan's World
+Top 5 Music Genres,Pop,Rock,Hip Hop,Electronic,Country
+Top 5 Healthiest Countries,Japan,Spain,Italy,Iceland,Switzerland
+Top 5 UNESCO World Heritage Sites,Great Wall of China,Machu Picchu,Petra,,

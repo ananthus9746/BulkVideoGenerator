@@ -1,0 +1,120 @@
+const fs = require('fs');
+const csv = require('csvtojson');
+const ffmpegPath = require('ffmpeg-static');
+const ffmpeg = require('fluent-ffmpeg');
+
+// Set the path to the CSV file
+const csvFilePath = './Untitled spreadsheet - Sheet1.csv';
+
+const inputVideoPath1 = './pexels-ushindi-namegabe-16757506 (360p).mp4';
+const inputVideoPath2 = './pexels-cottonbro-9694804 (540p).mp4';
+const inputVideoPath3 = './pexels_videos_2795385 (720p).mp4';
+const inputVideoPath4 = './video (540p) (1).mp4';
+const inputVideoPath5 = './video (540p).mp4';
+
+
+let videos=[inputVideoPath1,inputVideoPath2,inputVideoPath3,inputVideoPath4,inputVideoPath5]
+
+// Read and parse the CSV file
+csv()
+  .fromFile(csvFilePath)
+  .then((jsonObj) => {
+    // Iterate over each row in the CSV data
+
+
+    jsonObj.forEach((row, index) => {
+      // Extract the question and country data from the row
+      console.log("row..", row);
+
+      // Calculate the index of the video to select from the videos array
+      const videoIndex = index % videos.length;
+
+      // Get the selected video from the array
+      const inputVideoPath = videos[videoIndex];
+
+      // Set the output video file path
+      const outputVideoPath = `output_${index + 1}.mp4`;
+
+
+
+
+
+      // Generate the video
+      ffmpeg()
+        .setFfmpegPath(ffmpegPath)
+        .input(inputVideoPath)
+        .videoFilters([
+          {
+            filter: 'drawtext',
+            options: {
+              boxborderw: 10,
+              box: 1,
+              boxcolor: "red",
+              fontcolor: '#ffffff',
+              fontsize: 17,
+              text: `${row.field1}`,
+              x: '(w-tw)/2',
+              y: '(h/2-th-105)',  // Adjust the value to set the distance between lines
+            },
+          },
+          {
+            filter: 'drawtext',
+            options: {
+              fontcolor: 'green',
+              fontsize: 30,
+              text: `${row.field2}`,
+              x: '(w-tw)/2',
+              y: '(h/2-th-45)',  // Adjust the value to set the distance between lines
+            },
+          },
+          {
+            filter: 'drawtext',
+            options: {
+              fontcolor: 'yellow',
+              fontsize: 30,
+              text: `${row.field3}`,
+              x: '(w-tw)/2',
+              y: '(h/2-th-0)',  // Adjust the value to set the distance between lines
+            },
+          },
+          {
+            filter: 'drawtext',
+            options: {
+              fontcolor: 'red',
+              fontsize: 30,
+              text: `${row.field4}`,
+              x: '(w-tw)/2',
+              y: '(h/2+20)',  // Adjust the value to set the distance between lines
+            },
+          },
+          {
+            filter: 'drawtext',
+            options: {
+              fontcolor: 'blue',
+              fontsize: 30,
+              text: `${row.field5}`,
+              x: '(w-tw)/2',
+              y: '(h/2+55)',  // Adjust the value to set the distance between lines
+            },
+          },
+          {
+            filter: 'drawtext',
+            options: {
+              fontcolor: 'violet',
+              fontsize: 30,
+              text: `${row.field6}`,
+              x: '(w-tw)/2',
+              y: '(h/2+95)',  // Adjust the value to set the distance between lines
+            },
+          },
+        ])
+        .output(outputVideoPath)
+        .on('end', () => {
+          console.log(`Video created: ${outputVideoPath}`);
+        })
+        .on('error', (err) => {
+          console.error(`Error creating video: ${err.message}`);
+        })
+        .run();
+    });
+  });

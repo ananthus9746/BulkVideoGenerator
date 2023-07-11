@@ -1,0 +1,45 @@
+const fs = require('fs');
+const csv = require('csvtojson');
+const ffmpegPath = require('ffmpeg-static');
+const ffmpeg = require('fluent-ffmpeg');
+
+// Set the path to the CSV file
+const csvFilePath = './Untitled spreadsheet - Sheet1.csv';
+
+// Read and parse the CSV file
+csv()
+  .fromFile(csvFilePath)
+  .then((jsonObj) => {
+    // Iterate over each row in the CSV data
+
+
+    jsonObj.forEach((row, index) => {
+      // Extract the question and country data from the row
+
+      console.log("row..",row)
+
+
+      // Set the input video file path
+      const inputVideoPath = './pexels-ushindi-namegabe-16757506 (360p).mp4';
+
+      // Set the output video file path
+      const outputVideoPath = `output_${index + 1}.mp4`;
+
+      // Generate the video
+      ffmpeg()
+        .setFfmpegPath(ffmpegPath)
+        .input(inputVideoPath)
+        .complexFilter([
+          `[0:v]drawtext=text='${row.field1}':x=(w-text_w)/2:y=(h-text_h)/2:fontcolor=black:fontsize=12:fontcolor=black:box=1:boxcolor=white@0.5:boxborderw=20`,
+
+        ])
+        .output(outputVideoPath)
+        .on('end', () => {
+          console.log(`Video created: ${outputVideoPath}`);
+        })
+        .on('error', (err) => {
+          console.error(`Error creating video: ${err.message}`);
+        })
+        .run();
+    });
+  });
